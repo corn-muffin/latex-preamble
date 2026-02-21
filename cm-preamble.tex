@@ -13,6 +13,18 @@
 \usepackage{wasysym}
 \usepackage{stmaryrd}
 
+\stackMath
+\def\trianglelefteqslant{\ThisStyle{\mathrel{%
+  \stackinset{r}{.75pt+.15\LMpt}{t}{.1\LMpt}{\rule{.3pt}{1.1\LMex+.2ex}}{\SavedStyle\leqslant}%
+}}}
+
+\stackMath
+\def\trianglerighteqslant{\ThisStyle{\mathrel{%
+  \stackinset{r}{.75pt+.15\LMpt}{t}{.1\LMpt}{\rule{.3pt}{1.1\LMex+.2ex}}{\SavedStyle\geqslant}%
+}}}
+
+
+
 \newcommand{\XX}{{\mathbb{X}}}
 \newcommand{\YY}{{\mathbb{Y}}}
 \newcommand{\FF}{{\mathbb{F}}}
@@ -24,11 +36,11 @@
 \newcommand{\R}{{\mathbb{R}}}
 \newcommand{\PP}{{\mathbb{P}}}
 %\renewcommand{\P}{\mathds{P}}
-\newcommand{\A}{{\mathbb{A}}}
+\renewcommand{\AA}{{\mathbb{A}}}
 \newcommand{\0}{{\emptyset}}
 \newcommand{\one}{{\mathds{1}}}
 \renewcommand{\k}{{\mathbb{k}}}
-\newcommand{\K}{{\mathbb{K}}}
+\newcommand{\KK}{{\mathbb{K}}}
 \newcommand{\LL}{{\mathbb{L}}}
 
 \newcommand{\RP}{{\R P}}
@@ -72,6 +84,8 @@
 \newcommand{\leg}[2]{{\left(\frac{#1}{#2}\right)}}
 \newcommand{\ilim}{\varprojlim}
 \newcommand{\dlim}{\varinjlim}
+\newcommand{\lideal}{\trianglelefteqslant}
+\newcommand{\rideal}{\trianglerighteqslant}
 
 \newcommand{\p}{{\mathfrak p}}          % Prime ideal
 \newcommand{\q}{{\mathfrak q}}          % Prime ideal
@@ -111,6 +125,8 @@
 \DeclareMathOperator{\rad}{rad}
 \renewcommand{\div}{\mb{div}}
 \DeclareMathOperator{\Mod}{Mod}
+\newcommand{\trd}{\mbox{tr.d. }}
+\DeclareMathOperator{\ssp}{sp}
 
 \DeclareMathOperator{\red}{red}
 \DeclareMathOperator{\nil}{nil}
@@ -158,3 +174,4 @@
 \newcommand{\longiso}{\xrightarrow{\;\;\;~\sim\,\;\;\;}}
 \newcommand{\transv}{\;\overline{\smash{\pitchfork}\vphantom{\resizebox{\width}{0.9\height}{$\pitchfork$}}}\;}
 \newcommand{\alt}[1]{\mbox{$\bigwedge^{#1}$}}
+
