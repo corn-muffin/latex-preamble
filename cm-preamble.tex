@@ -29,6 +29,7 @@
 \newcommand{\XX}{{\mathbb{X}}}
 \newcommand{\YY}{{\mathbb{Y}}}
 \newcommand{\FF}{{\mathbb{F}}}
+\newcommand{\MM}{\mathbb{M}}
 \newcommand{\NN}{{\mathbb{N}}}
 \newcommand{\ZZ}{{\mathbb{Z}}}
 \newcommand{\QQ}{{\mathbb{Q}}}
@@ -41,7 +42,7 @@
 \renewcommand{\AA}{{\mathbb{A}}}
 \newcommand{\0}{{\emptyset}}
 \newcommand{\one}{{\mathds{1}}}
-\renewcommand{\k}{{\mathbb{k}}}
+\newcommand{\kk}{{\mathbb{k}}}
 \newcommand{\KK}{{\mathbb{K}}}
 \newcommand{\LL}{{\mathbb{L}}}
 
@@ -76,10 +77,12 @@
 \newcommand{\cK}{{\mathcal{K}}}
 \renewcommand{\L}{{\mathcal{L}}}
 \newcommand{\M}{{\mathcal M}}
+\newcommand{\N}{{\mathcal N}}
 \renewcommand{\O}{{\mathcal O}} 
 \newcommand{\cP}{{\mathcal P}}
 \newcommand{\cR}{{\mathcal R}}
 \newcommand{\cT}{{\mathcal T}}
+\newcommand{\U}{{\mathcal U}}
 \newcommand{\V}{{\mathcal V}}
 \newcommand{\X}{{\mathcal X}}
 
@@ -108,6 +111,9 @@
 \renewcommand{\c}{{\mathfrak c}}          % Ideal
 \renewcommand{\r}{{\mathfrak r}}
 \newcommand{\g}{{\mathrfrak g}}
+\renewcommand{\k}{{\mathfrak k}}
+\newcommand{\h}{\fr{h}}
+\newcommand{\z}{\fr{z}}
 \newcommand{\fR}{\fr{R}}
 
 
@@ -150,6 +156,7 @@
 \DeclareMathOperator{\cl}{cl}
 \DeclareMathOperator{\CaCl}{CaCl}
 \DeclareMathOperator{\Pic}{Pic}
+\newcommand{\lk}{\mb{lk}}
 
 \newcommand{\red}{{\rm red}}
 \DeclareMathOperator{\nil}{nil}
@@ -167,10 +174,13 @@
 \newcommand{\Ab}{\fr{Ab}}
 \newcommand{\Sch}{\fr{Sch}}
 \newcommand{\Ring}{\fr{Ring}}
+\newcommand{\Cob}{{\textsf{Cob}}}
+\newcommand{\Vect}{{\textsf{Vect}}}
 
 \DeclareMathOperator{\Ad}{Ad}
-\DeclareMathOperator{\ad}{ad}
+\renewcommand{\ad}{{\mb ad}}
 \DeclareMathOperator{\SU}{SU}
+\newcommand{\PSU}{{\mb PSU}}
 \DeclareMathOperator{\su}{\fr{su}}
 \DeclareMathOperator{\Sp}{Sp}
 %\DeclareMathOperator{\sp}{\fr{sp}}
@@ -178,11 +188,9 @@
 \DeclareMathOperator{\so}{\fr{so}}
 \DeclareMathOperator{\SL}{SL}
 \renewcommand{\sl}{\fr{sl}}
-\DeclareMathOperator{\U}{U}
-\renewcommand{\g}{\fr{g}}
-\newcommand{\h}{\fr{h}}
-\newcommand{\z}{\fr{z}}
+%\DeclareMathOperator{\U}{U}
 \newcommand{\gl}{\fr{gl}}
+\newcommand{\Lie}{{\rm Lie\,}}
 
 \newcommand{\Set}{\textsf{Set}}
 
@@ -195,7 +203,8 @@
 \newcommand{\bigtensor}{\bigotimes}
 \newcommand{\vphi}{\varphi}
 
-\newcommand{\mb}[1]{{\rm {#1}}}
+\newcommand{\mb}[1]{{\uptext{#1}}}
+\renewcommand{\bf}[1]{\textbf{#1}}
 \newcommand{\iso}{\xrightarrow{~\sim~}}
 \newcommand{\longiso}{\xrightarrow{\;\;\;~\sim\,\;\;\;}}
 \newcommand{\transv}{\;\overline{\smash{\pitchfork}\vphantom{\resizebox{\width}{0.9\height}{$\pitchfork$}}}\;}
@@ -206,3 +215,13 @@
 \newcommand{\longsurj}{\twoheadlongrightarrow}
 \newcommand{\inj}{\hookrightarrow}
 \newcommand{\longinj}{\hooklongrightarrow}
+
+% normal check sucks, so we define widecheck, and redfine widehat in an analogous manner so that everything is homogeneous.
+
+\DeclareFontFamily{U}{mathx}{}
+\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareMathAccent{\widehat}{0}{mathx}{"70}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+
+\newcommand{\wcheck}{\widecheck}
