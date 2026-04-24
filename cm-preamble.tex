@@ -24,7 +24,15 @@
   \stackinset{r}{.75pt+.15\LMpt}{t}{.1\LMpt}{\rule{.3pt}{1.1\LMex+.2ex}}{\SavedStyle\geqslant}%
 }}}
 
+% normal check sucks, so we define widecheck, and redfine widehat in an analogous manner so that everything is homogeneous.
 
+\DeclareFontFamily{U}{mathx}{}
+\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareMathAccent{\widehat}{0}{mathx}{"70}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+
+\newcommand{\mb}[1]{{\uptext{#1}}}
 
 \newcommand{\XX}{{\mathbb{X}}}
 \newcommand{\YY}{{\mathbb{Y}}}
@@ -203,7 +211,6 @@
 \newcommand{\bigtensor}{\bigotimes}
 \newcommand{\vphi}{\varphi}
 
-\newcommand{\mb}[1]{{\uptext{#1}}}
 \renewcommand{\bf}[1]{\textbf{#1}}
 \newcommand{\iso}{\xrightarrow{~\sim~}}
 \newcommand{\longiso}{\xrightarrow{\;\;\;~\sim\,\;\;\;}}
@@ -215,13 +222,5 @@
 \newcommand{\longsurj}{\twoheadlongrightarrow}
 \newcommand{\inj}{\hookrightarrow}
 \newcommand{\longinj}{\hooklongrightarrow}
+\newcommand{\wcheck}{\widecheck} %note that \widecheck isn't standard.
 
-% normal check sucks, so we define widecheck, and redfine widehat in an analogous manner so that everything is homogeneous.
-
-\DeclareFontFamily{U}{mathx}{}
-\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
-\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
-\DeclareMathAccent{\widehat}{0}{mathx}{"70}
-\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
-
-\newcommand{\wcheck}{\widecheck}
