@@ -24,6 +24,19 @@
   \stackinset{r}{.75pt+.15\LMpt}{t}{.1\LMpt}{\rule{.3pt}{1.1\LMex+.2ex}}{\SavedStyle\geqslant}%
 }}}
 
+\makeatletter
+\newbox\xrat@below
+\newbox\xrat@above
+\newcommand{\xrightarrowtail}[2][]{%
+  \setbox\xrat@below=\hbox{\ensuremath{\scriptstyle #1}}%
+  \setbox\xrat@above=\hbox{\ensuremath{\scriptstyle #2}}%
+  \pgfmathsetlengthmacro{\xrat@len}{max(\wd\xrat@below,\wd\xrat@above)+.6em}%
+  \mathrel{\tikz [>->,baseline=-.75ex]
+                 \draw (0,0) -- node[below=-2pt] {\box\xrat@below}
+                                node[above=-2pt] {\box\xrat@above}
+                       (\xrat@len,0) ;}}
+\makeatother
+
 % normal check sucks, so we define widecheck, and redfine widehat in an analogous manner so that everything is homogeneous.
 
 \DeclareFontFamily{U}{mathx}{}
@@ -213,15 +226,18 @@
 \newcommand{\vphi}{\varphi}
 
 \renewcommand{\bf}[1]{\textbf{#1}}
-\newcommand{\iso}{\xrightarrow{~\sim~}}
-\newcommand{\longiso}{\xrightarrow{\;\;\;~\sim\,\;\;\;}}
+\newcommand{\iso}{\xrightarrow{~\cong~}}
+\newcommand{\longiso}{\xrightarrow{\;\;\;~\cong\,\;\;\;}}
 \newcommand{\transv}{\;\overline{\smash{\pitchfork}\vphantom{\resizebox{\width}{0.9\height}{$\pitchfork$}}}\;}
 \newcommand{\alt}[1]{\mbox{$\bigwedge^{#1}$}}
+\newcommand{\longrightarrowtail}{\xrightarrowtail{~~~}}
 \newcommand{\hooklongrightarrow}{\lhook\joinrel\longrightarrow}
 \newcommand{\twoheadlongrightarrow}{\relbar\joinrel\twoheadrightarrow}
 \newcommand{\surj}{\twoheadrightarrow}
 \newcommand{\longsurj}{\twoheadlongrightarrow}
 \newcommand{\inj}{\hookrightarrow}
 \newcommand{\longinj}{\hooklongrightarrow}
+\newcommand{\inc}{\rightarrowtail}
+\newcommand{\longinc}{\longrightarrowtail}
 \newcommand{\wcheck}{\widecheck} %note that \widecheck isn't standard.
 
