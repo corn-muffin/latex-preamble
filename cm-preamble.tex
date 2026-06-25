@@ -14,6 +14,13 @@
 \usepackage{stmaryrd}
 \usepackage{stackengine,scalerel}
 
+\newcommand{\qbinom}[2]{
+{\begin{bmatrix}
+    {\;#1\;}\\[2pt]
+    {\;#2\;}
+\end{bmatrix}_q}}
+
+
 \stackMath
 \def\trianglelefteqslant{\ThisStyle{\mathrel{%
   \stackinset{r}{.75pt+.15\LMpt}{t}{.1\LMpt}{\rule{.3pt}{1.1\LMex+.2ex}}{\SavedStyle\leqslant}%
